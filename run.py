@@ -232,4 +232,107 @@ def main():
                         print('c:Delete Credentials')
                         print('d:Search Credentials')
                         print('e:Leave')
-                        
+                        selected = input()
+                        if selected == 'a':
+                            while True:
+                                print('Do you want to proceed? y/n')
+                                decision = input().lower()
+                                if decision == 'y':
+                                    print("Input Account name")
+                                    accname = input()
+                                    print("Input user name")
+                                    uname = input()
+                                    print("Input a password")
+                                    print(
+                                        "Do you want a computer generated password ? use 'gen' or 'new' to create your own ")
+                                    word = input().lower()
+                                    if word == 'gen':
+                                        accpass = random.randint(0, 1000)
+                                        print(
+                                            f"Account:{accname} username:{uname} Password:{accpass}")
+                                        print(f"")
+                                        print('\n')
+                                    elif word == 'new':
+                                        print("Create password")
+                                        accpass = input()
+                                        print(
+                                            f"Account:{accname}  username:{uname} Password:{accpass}")
+                                    else:
+                                        print("Invalid choice")
+                                    save_credential(
+                                        create_credential(accname, uname, accpass))
+                                elif decision == 'n':
+                                    break
+                                else:
+                                    print(
+                                        "Wrong choice use  either y to continue or n to stop")
+                        elif selected == 'b':
+                            while True:
+                                print('view your credenttial below')
+                                if display_credential():
+                                    for creds in display_credential():
+                                        print(
+                                            f"!!Account Name:{creds.account_name} username:{creds.username} Password:{creds.account_password}!!")
+                                        print(
+                                            f"")
+                                else:
+                                    print('\n')
+                                    print(
+                                        "You don't have any saved credential before \n")
+                                print("Do you want to go back yes/no")
+                                reverse = input().lower()
+                                if reverse == 'yes':
+                                    break
+                                elif reverse == 'no':
+                                    continue
+                                else:
+                                    print("Please input the correct choice")
+                                    continue
+                        elif selected == 'c':
+                            while True:
+                                print("search for account to delete credential")
+                                find = input()
+                                if existing_credentials(find):
+                                    accfind = find_credential(find)
+                                    print(
+                                        "Are you really sure you want to delete your account yes/no")
+                                    done = input().lower()
+                                    if done == 'yes':
+                                        delete_credential(accfind)
+                                        print("Accont deleted successfully")
+                                        break
+                                    elif done == "no":
+                                        continue
+                                else:
+                                    print("Credential does not seem to exist")
+                                    break
+                        elif selected == 'd':
+                            while True:
+                                print("Do you want to proceed y/n")
+                                proc = input().lower()
+                                if proc == 'y':
+                                    print(
+                                        "Input the name of the account to view credential")
+                                    account = input()
+                                    if existing_credentials(account):
+                                        found = find_credential(account)
+                                        print(
+                                            f"ACCOUNT NAME:{found.account_name} PASSWORD {found.account_password}")
+                                    else:
+                                        print("This account does not exist")
+                                elif proc == 'n':
+                                    break
+                                else:
+                                    print("Input a valid choice")
+                        elif selected == 'e':
+                            break
+                        else:
+                            print("options not selected")
+                            continue
+        elif option == 'ex':
+            print("BY ........")
+            break
+        else:
+            print("I really didn't get that")
+if __name__ == '__main__':
+    main()
