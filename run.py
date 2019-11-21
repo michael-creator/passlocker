@@ -59,3 +59,31 @@ def display_credential():
     Functiomn that displays all the saved credentials
     '''
     return Credential.display_credentials()
+
+def main():
+    while True:
+        print(" PASS LOCKER ")
+        print('_'*30)
+        print("Do you wish to create account with pass locker? yes/no")
+        print("use Short code 'ex' to  exit")
+        option = input().lower()
+        if option == "yes":
+            print('* Login ')
+            print('Input username \n')
+            nomname = input()
+            print('\n')
+            print('Input password')
+            nompass = input()
+            authentication = user_exist(nomname)
+            if authentication == True:
+                print(f"Welcome:{nomname} to your Account ")
+                print('*'*40)
+                print("Select an option either a,b,c,d or e")
+                print('\n')
+                while True:
+                    print('1:Add credential')
+                    print('2:View saved credential')
+                    print('3:Delete Credentials')
+                    print('4:Search Credentials')
+                    print('5:Leave')
+                    
