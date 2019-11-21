@@ -43,3 +43,19 @@ def existing_credentials(name):
     '''
     Credential.credential_exists(name)
     
+def user_exist (name):
+    """
+    Functiion that checks if an account really exists
+    """
+    User.user_exists(name)
+    return name
+def delete_credential(credentials):
+    '''
+    Function that deletes credentials that are no longer in use
+    '''
+    return Credential.delete_credentials(credentials)
+def display_credential():
+    '''
+    Functiomn that displays all the saved credentials
+    '''
+    return Credential.display_credentials()
