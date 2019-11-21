@@ -65,7 +65,7 @@ def main():
         print(" PASS LOCKER ")
         print('_'*30)
         print("Do you wish to create account with pass locker? yes/no")
-        print("use Short code 'ex' to  exit")
+        print("use Short code 'esc' to  exit")
         option = input().lower()
         if option == "yes":
             print('* Login ')
@@ -212,7 +212,7 @@ def main():
             else:
                 save_user(create_user(username, password))
             while True:
-                print('*** Login ***')
+                print('!!! Login !!!')
                 print('Input username \n')
                 nomname = input()
                 print('\n')
