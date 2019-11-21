@@ -28,7 +28,7 @@ class TestUser(unittest.TestCase):
         """
         
         Credential.credential_list = []
-      def test_delete_credentials(self):
+    def test_delete_credentials(self):
         """
         checks if the user can delete his or her credentials
         """
@@ -62,7 +62,7 @@ class TestUser(unittest.TestCase):
         method that return all the credential saved
         '''
         self.assertEqual(Credential.display_credentials(),
-                         Credential.credentials_list)
+         Credential.credentials_list)
   
 if __name__ == '__main__':
     unittest.main()
