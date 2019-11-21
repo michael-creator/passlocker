@@ -1,5 +1,5 @@
-import unittest  # Importing the unittest module
-from user import User  # Importing class user
+import unittest 
+from user import User  
 
 class TestUser(unittest.TestCase):
     """
@@ -16,6 +16,19 @@ class TestUser(unittest.TestCase):
         """
         checks to test if the object is initialized properly
         """
-
+        
+    def test_save_object(self):
+        """
+        checks wether object is saved corectly
+        """
+        
+    def tearDown(self):
+        """
+        tearDown method that does clear up after test case has run.
+        """
+        User.user_list = []
+        
+    
+    
 if __name__ == '__main__':
     unittest.main()
