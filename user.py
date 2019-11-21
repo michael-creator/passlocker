@@ -15,3 +15,23 @@ class User:
         """
         User.user_list.append(self)
     
+    @classmethod
+    def user_exists(cls, login_username):
+        '''
+       this method checks if the user really exist
+        '''
+        for user in cls.user_list:
+            if user.login_username == login_username:
+                return True
+        return False
+
+
+
+
+
+
+
+
+
+
+    
