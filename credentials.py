@@ -29,11 +29,16 @@ class Credential:
     @classmethod
     def credential_exists(cls, acc_name):
         '''
-        checks if  credential object exists from the credential  list.
+        this checks if a credential object exists from the credential  list.
        
         '''
         for credential in cls.credentials_list:
             if credential.account_name == acc_name:
                 return True
         return False
-
+    @classmethod
+    def display_credentials(cls):
+        '''
+        Method which will display the credential list
+        '''
+        return cls.credentials_list
