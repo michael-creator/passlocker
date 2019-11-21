@@ -28,7 +28,10 @@ class TestUser(unittest.TestCase):
         """
         User.user_list = []
         
-    
+    def test_delete_user(self):
+        """
+        test_delete_user to test if we can remove a user from the user list
+        """
     
 if __name__ == '__main__':
     unittest.main()
