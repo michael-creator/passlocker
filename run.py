@@ -221,4 +221,15 @@ def main():
                 if nomname != username or nompass != password:
                     print("Wrong password or usename")
                     continue
-               
+                else:
+                    print(f"Welcome:{nomname} to your Account ")
+                    print('*'*40)
+                    print("Select an option either a,b,c,d or e")
+                    print('\n')
+                    while True:
+                        print('a:Add credential')
+                        print('b:View saved credential')
+                        print('c:Delete Credentials')
+                        print('d:Search Credentials')
+                        print('e:Leave')
+                        
