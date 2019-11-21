@@ -10,7 +10,7 @@ This app will help users in being able to save their password and also generate 
 
 ## Setup/Installation Requirements
 * clone my Github repository.
-(https://github.com/michael-creator/passlocker)
+( https://github.com/michael-creator/passlocker )
 * create a file on your machine and git clone.
 * open the file in you atom or VScode.
 * install pip install pyperclip.
@@ -29,4 +29,5 @@ tel 094897864847
 
 ### License
 *MIT*
-Copyright (c) 2019 **MICHAEL MAINA **
+Copyright (c) 2019
+ **MICHAEL MAINA **
