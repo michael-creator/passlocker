@@ -36,7 +36,16 @@ class TestUser(unittest.TestCase):
         test_credential = Credential("mickey", "instragram", "2017")
         test_credential.save_credential()
         self.new_credential.delete_credentials() 
-        # self.assertEqual(len(Credential.credential_list), 1)
+        
+    def test_find_credential_by_name(self):
+        """
+        test to check if we can find a user by using  account name and display information
+        """
+        self.new_credential.save_credential()
+        test_credential = Credential("mickey", "facebook", "password")
+        test_credential.save_credential()
+        found_credential = Credential.find_by_name("facebook")
+        self.assertEqual(found_credential.account_password, "password")
     
   
 if __name__ == '__main__':
