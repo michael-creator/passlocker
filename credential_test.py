@@ -18,6 +18,17 @@ class TestUser(unittest.TestCase):
         """
         self.assertEqual(self.new_credential.account_name, "facebook")
         self.assertEqual(self.new_credential.account_password, "password")
-   
+    def test_save_object(self):
+        """
+        save_object test case to test if the object will be save in user list and credential list
+        """
+    def tearDown(self):
+        """
+        tear down method that does clears up after test case has run.
+        """
+        
+        Credential.credential_list = []
+    
+  
 if __name__ == '__main__':
     unittest.main()
