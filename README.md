@@ -1,4 +1,4 @@
-# keyGuard
+# PASS LOCKER
 ####
 
 This app will help users in being able to save their password and also generate new passwords and create new accounts also for users who forget their password this app will help them remember..by displaying their full details.
