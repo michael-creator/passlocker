@@ -47,6 +47,7 @@ class TestUser(unittest.TestCase):
         found_credential = Credential.find_by_name("facebook")
         self.assertEqual(found_credential.account_password, "password")
     
+    
   
 if __name__ == '__main__':
     unittest.main()
