@@ -20,7 +20,7 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_credential.account_password, "password")
     def test_save_object(self):
         """
-        save_object test case to test if the object will be save in user list and credential list
+        save_object test case to test if the object will be saved in user list and credential list
         """
     def tearDown(self):
         """
@@ -28,6 +28,15 @@ class TestUser(unittest.TestCase):
         """
         
         Credential.credential_list = []
+      def test_delete_credentials(self):
+        """
+        checks if the user can delete his or her credentials
+        """
+        self.new_credential.save_credential()
+        test_credential = Credential("mickey", "instragram", "2017")
+        test_credential.save_credential()
+        self.new_credential.delete_credentials() 
+        # self.assertEqual(len(Credential.credential_list), 1)
     
   
 if __name__ == '__main__':
