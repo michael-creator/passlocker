@@ -198,4 +198,27 @@ def main():
                 print('Password \n')
                 password = input()
                 print("signed up successfully")
-        
+        elif option == "no":
+            print("Create Account ")
+            print('*'*40)
+            print('Select Username')
+            username = input()
+            print('\n')
+            print('Password \n')
+            password = input()
+            verification = user_exist(username)
+            if verification == True:
+                print("The username already exists")
+            else:
+                save_user(create_user(username, password))
+            while True:
+                print('*** Login ***')
+                print('Input username \n')
+                nomname = input()
+                print('\n')
+                print('Input password')
+                nompass = input()
+                if nomname != username or nompass != password:
+                    print("Wrong password or usename")
+                    continue
+               
